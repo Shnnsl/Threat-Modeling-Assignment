@@ -19,11 +19,11 @@
         "cells": [
           {
             "position": {
-              "x": 579.9999999999991,
-              "y": 59.99999999999852
+              "x": 269.9999999999982,
+              "y": 59.999999999996305
             },
             "size": {
-              "width": 560,
+              "width": 870,
               "height": 780
             },
             "attrs": {
@@ -33,8 +33,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "5fb69c88-d551-43ef-80c0-d170241da121",
             "zIndex": -1,
+            "id": "5fb69c88-d551-43ef-80c0-d170241da121",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Server-Side Trust Boundary",
@@ -42,11 +42,13 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
+                "510d2076-1254-4bfe-9d1c-ee8c6f5d71bd",
                 "b50bc387-2c73-4ba2-9698-190c989bf1f1",
                 "8d9d4d93-d3c4-42fb-a7b6-2e09b85247eb",
                 "c4c4cc6d-e9d0-4b47-87f0-5a28e35076e0"
               ],
               "containedElements": [
+                "6d1d698f-23f1-4394-8cde-b13532783539",
                 "3db6c6d8-9153-4bea-b0d2-eb9621ba4f67",
                 "eb9ffe6d-7692-4a77-b121-ecede550f398"
               ]
@@ -73,6 +75,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 0,
             "ports": {
               "groups": {
                 "top": {
@@ -156,7 +159,6 @@
               ]
             },
             "id": "610182f7-ffb3-42b5-9d92-3931b3ea1815",
-            "zIndex": 0,
             "data": {
               "type": "tm.Actor",
               "name": "User /  Web Browser",
@@ -190,6 +192,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -273,7 +276,6 @@
               ]
             },
             "id": "6d1d698f-23f1-4394-8cde-b13532783539",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Web Application",
@@ -310,6 +312,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -393,7 +396,6 @@
               ]
             },
             "id": "3db6c6d8-9153-4bea-b0d2-eb9621ba4f67",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Open Source\n Authentication Component ",
@@ -433,6 +435,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -516,7 +519,6 @@
               ]
             },
             "id": "eb9ffe6d-7692-4a77-b121-ecede550f398",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "Data Base",
@@ -564,7 +566,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "5fb69c88-d551-43ef-80c0-d170241da121"
+              ]
             },
             "labels": [
               "Login Request\n (username / password)"
@@ -823,85 +827,15 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "1f64843d-43aa-4933-91d2-8f04e4b431a2",
+            "id": "0e63ebec-33e2-4e6d-a0b6-f4e69e72a520",
             "source": {
-              "x": 30,
-              "y": 240
+              "x": 106,
+              "y": 420
             },
             "target": {
-              "x": 440,
-              "y": 470
-            },
-            "vertices": [
-              {
-                "x": 200,
-                "y": 330
-              },
-              {
-                "x": 270,
-                "y": 450
-              },
-              {
-                "x": 320,
-                "y": 450
-              },
-              {
-                "x": 440,
-                "y": 370
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "69215b1c-405f-4636-afce-96d2d48d3e40",
-            "source": {
-              "x": 110,
-              "y": 240
-            },
-            "target": {
-              "cell": "6d1d698f-23f1-4394-8cde-b13532783539",
-              "port": "74dc4674-7a98-4fcd-87a6-f3f8b0e750ee"
-            },
-            "vertices": [
-              {
-                "x": 110,
-                "y": 420
-              }
-            ]
+              "x": 206,
+              "y": 520
+            }
           }
         ],
         "description": "DFD for sample web application"
