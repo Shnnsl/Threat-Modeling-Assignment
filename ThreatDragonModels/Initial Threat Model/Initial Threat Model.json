@@ -45,13 +45,21 @@
                 "510d2076-1254-4bfe-9d1c-ee8c6f5d71bd",
                 "b50bc387-2c73-4ba2-9698-190c989bf1f1",
                 "8d9d4d93-d3c4-42fb-a7b6-2e09b85247eb",
-                "c4c4cc6d-e9d0-4b47-87f0-5a28e35076e0"
+                "c4c4cc6d-e9d0-4b47-87f0-5a28e35076e0",
+                "ec33f5ad-8876-4804-843c-299fee499d2e"
               ],
               "containedElements": [
                 "6d1d698f-23f1-4394-8cde-b13532783539",
                 "3db6c6d8-9153-4bea-b0d2-eb9621ba4f67",
                 "eb9ffe6d-7692-4a77-b121-ecede550f398"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -784,6 +792,164 @@
               "cell": "610182f7-ffb3-42b5-9d92-3931b3ea1815",
               "port": "bc6e3453-5706-47e6-a6b9-88c9719fb145"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request MOTD page",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "5fb69c88-d551-43ef-80c0-d170241da121"
+              ]
+            },
+            "labels": [
+              "Request MOTD page"
+            ],
+            "id": "ec33f5ad-8876-4804-843c-299fee499d2e",
+            "source": {
+              "x": 30,
+              "y": 230
+            },
+            "target": {
+              "cell": "6d1d698f-23f1-4394-8cde-b13532783539",
+              "port": "74dc4674-7a98-4fcd-87a6-f3f8b0e750ee"
+            },
+            "vertices": [
+              {
+                "x": 150,
+                "y": 305
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Retrieve MOTD",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Retrieve MOTD"
+            ],
+            "id": "52d8c293-8e53-4118-a3c2-9df99a18ae9d",
+            "source": {
+              "cell": "6d1d698f-23f1-4394-8cde-b13532783539",
+              "port": "74dc4674-7a98-4fcd-87a6-f3f8b0e750ee"
+            },
+            "target": {
+              "cell": "eb9ffe6d-7692-4a77-b121-ecede550f398",
+              "port": "bec59648-16d8-46f0-9ec0-4ef1b973214d"
+            },
+            "vertices": [
+              {
+                "x": 510,
+                "y": 405
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "ccb49e1b-d995-430f-91a1-f3984f35aab2",
+            "source": {
+              "x": 661,
+              "y": 580
+            },
+            "target": {
+              "x": 761,
+              "y": 680
+            },
+            "vertices": [
+              {
+                "x": 700,
+                "y": 580
+              }
+            ]
           }
         ],
         "description": "DFD for sample web application"
