@@ -71,8 +71,8 @@
                 "text": "User /  Web Browser"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -169,9 +169,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "6789b967-1279-46fa-b0ae-01c90eeea716",
+                  "title": "Session hijacking / impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker may steal or reuse a valid session token, allowing them to impersonate a legitimate user and gain unauthorized access to the application. This can occur through insecure transport, weak cookie settings, or session exposure on the client side.\n",
+                  "mitigation": "Enforce HTTPS, use secure and HttpOnly cookie flags, implement session timeouts, and regenerate session tokens after login to prevent impersonation attacks.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -188,8 +206,8 @@
                 "text": "Web Application"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -286,12 +304,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "83e9ea26-b29c-455d-b590-d26780d9afbb",
+                  "title": "User denies submitting a comment due to insufficient logging",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Without complete audit logging such as timestamps, user identifiers, request metadata, and comment ID's a user may deny submitting a comment. This makes it difficult for administrators to trace actions, investigate abuse, or establish accountability.\n",
+                  "mitigation": "Implement detailed audit logs for comment submissions, including user ID, timestamp, IP address, and request identifiers to ensure accountability.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -308,8 +348,8 @@
                 "text": "Open Source\n Authentication Component "
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -406,12 +446,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ff6c883e-53d4-44a9-8bbc-091fb51eb0e8",
+                  "title": "Authentication bypass due to vulnerable or misconfigured open source component",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "A vulnerability or insecure configuration in the open-source authentication component may allow an attacker to tamper with credential validation, modify authentication logic, or bypass password checks. Because this component controls user identity verification, a failure here can result in full unauthorized access to the application.\n",
+                  "mitigation": "Regularly update the authentication library, apply security patches, use dependency scanning tools, enforce secure configuration, and add compensating controls such as rate limiting and account lockout.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "29393c01-9f09-4be0-8b3b-b0f1fb10eb84",
+                  "title": "Login endpoint flooding causes resource exhaustion",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An attacker can overload the authentication process with repeated or automated login attempts, consuming server or database resources. This may prevent legitimate users from authenticating or accessing the application, impacting availability.\n",
+                  "mitigation": "Implement rate limiting, CAPTCHAs, account lockout policies, and monitoring on authentication requests to reduce the likelihood of resource exhaustion attacks.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -542,7 +617,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -563,15 +639,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "45deb26f-0520-4d9a-834d-f83a51408115",
+                  "title": "Credential exposure through insecure transport or verbose error messages",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "User credentials or sensitive authentication information may be exposed if the login request is transmitted without strong encryption, or if detailed error messages and logs reveal sensitive data. This could lead to account compromise and loss of confidentiality.\n",
+                  "mitigation": "Enforce HTTPS/TLS for all communication, avoid detailed error messages, sanitize logs, and ensure credentials are never logged or exposed in plaintext.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "5fb69c88-d551-43ef-80c0-d170241da121"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Login Request\n (username / password)"
@@ -584,7 +679,13 @@
             "target": {
               "cell": "6d1d698f-23f1-4394-8cde-b13532783539",
               "port": "62320476-b8b5-4536-ab03-2813cdaf250e"
-            }
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 195
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -635,7 +736,7 @@
             },
             "vertices": [
               {
-                "x": 600,
+                "x": 720,
                 "y": 230
               }
             ]
@@ -1108,6 +1209,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
