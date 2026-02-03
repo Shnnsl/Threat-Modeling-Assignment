@@ -500,7 +500,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Data Base"
+                "text": "DataBase"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -599,7 +599,7 @@
             "id": "eb9ffe6d-7692-4a77-b121-ecede550f398",
             "data": {
               "type": "tm.Store",
-              "name": "Data Base",
+              "name": "DataBase",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1049,7 +1049,13 @@
             "target": {
               "cell": "6d1d698f-23f1-4394-8cde-b13532783539",
               "port": "48f36876-8d9e-4e40-a1d7-62d058ad4b4e"
-            }
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 145
+              }
+            ]
           },
           {
             "shape": "flow",
